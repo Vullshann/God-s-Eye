@@ -6,4 +6,4 @@ const conf = require("./config.json")
 
 
 
-bot.log(conf.token)
+bot.login(conf.token)
