@@ -8,7 +8,7 @@ bot.on("ready", async () => {
     let statues = [
         `serveur : ${bot.guilds.size}`,
         `channel : ${bot.channels.size}`,
-        `version : V1.0`,
+        `version : V.Proto`,
         `membre : ${bot.users.size}`
     ]
     setInterval(() => {
@@ -20,13 +20,16 @@ bot.on("ready", async () => {
 });
 
 bot.on("message", async message => {
+    const P1 = ["bonjour","holla","hey","wesh","koukou","coucou"];
     if(message.author.bot) return;
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0]
     let Args = messageArray.slice(1)
 
-    if(cmd === "test"){
-        message.delete(5000)
+    if(cmd === P1.some(word => message.content.includes(word))){
+        const R1 = ["bonjour","holla","hey","wesh","koukou","coucou"];
+        let r1 = R1[Math.floor(Math.random() * R1.length)]
+        message.channel.send(r1 + " !")
     }
     
 });
