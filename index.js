@@ -25,7 +25,7 @@ bot.on("message", async message => {
     let cmd = messageArray[0]
     let Args = messageArray.slice(1)
 
-    if(cmd === 'test'){
+    if(cmd === "test"){
         message.delete(5000)
     }
     
