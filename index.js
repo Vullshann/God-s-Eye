@@ -28,8 +28,8 @@ bot.on("message", async message => {
         message.delete(5000)
     }
     
-})
+});
 
 
 
-bot.login(conf.token)
+bot.login(conf.token);
