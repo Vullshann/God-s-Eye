@@ -21,6 +21,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
     const P1 = ["bonjour","holla","hey","wesh","koukou","coucou"];
+    const P2 = ["connard","pd","bâtard"]
     if(message.author.bot) return;
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0]
@@ -30,6 +31,9 @@ bot.on("message", async message => {
         const R1 = ["bonjour","holla","hey","wesh","koukou","coucou"];
         let r1 = R1[Math.floor(Math.random() * R1.length)]
         message.channel.send(r1 + " !")
+    }
+    if(P2.some(word => message.content.includes(word))){
+        message.reply(":x: Pas d'insulte merci..")
     }
     
 });
