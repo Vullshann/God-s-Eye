@@ -28,7 +28,7 @@ bot.on("message", async message => {
     if(cmd === 'test'){
         message.delete(5000)
     }
-    //
+    
 });
 
 
