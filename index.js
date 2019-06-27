@@ -26,7 +26,7 @@ bot.on("message", async message => {
     let cmd = messageArray[0]
     let Args = messageArray.slice(1)
 
-    if(cmd === P1.some(word => message.content.includes(word))){
+    if(P1.some(word => message.content.includes(word))){
         const R1 = ["bonjour","holla","hey","wesh","koukou","coucou"];
         let r1 = R1[Math.floor(Math.random() * R1.length)]
         message.channel.send(r1 + " !")
