@@ -17,8 +17,11 @@ bot.on("ready", async () => {
     }, 9000);
     console.log("Bot connected...")
     console.log("___________________")
-    bot.user.setStatus("Online")
 });
+
+bot.on("message", async message => {
+    
+})
 
 
 
